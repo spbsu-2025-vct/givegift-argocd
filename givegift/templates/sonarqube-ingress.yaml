@@ -15,4 +15,4 @@ spec:
               service:
                 name: sonarqube-sonarqube
                 port:
-                  number: 80
+                  number: 9000
