@@ -4,6 +4,7 @@ kind: Deployment
 metadata:
   name: {{ .Chart.Name }}-backend
 spec:
+  replicas: {{ .Values.backend.replicaCount.min }}
   selector:
     matchLabels:
       name: {{ .Chart.Name }}-backend

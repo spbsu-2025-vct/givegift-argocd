@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: {{ .Chart.Name }}-frontend
 spec:
+  replicas: {{ .Values.frontend.replicaCount.min }}
   selector:
     matchLabels:
       name: {{ .Chart.Name }}-frontend
