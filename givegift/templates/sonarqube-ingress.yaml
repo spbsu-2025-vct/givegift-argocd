@@ -13,6 +13,6 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: sonarqube
+                name: sonarqube-sonarqube
                 port:
                   number: 80
