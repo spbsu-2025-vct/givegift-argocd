@@ -19,11 +19,7 @@ spec:
           imagePullPolicy: {{ .Values.frontend.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.frontend.service.port }}
-          resources:
-            requests:
-              cpu: "250m"
-            limits:
-              cpu: "500m"   
+  
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
