@@ -7,7 +7,7 @@ frontend:
     tag: latest
     pullPolicy: Always
   replicaCount:
-    min: 1
+    min: 2
     max: 5
   cpuAverageUtilization: 15
 
