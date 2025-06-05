@@ -19,6 +19,13 @@ spec:
           imagePullPolicy: {{ .Values.frontend.image.pullPolicy }}
           ports:
             - containerPort: {{ .Values.frontend.service.port }}
+          resources:
+            requests:
+              cpu: 200m
+              memory: 256Mi
+            limits:
+              cpu: 500m
+              memory: 512Mi
   
 ---
 apiVersion: autoscaling/v2
@@ -39,10 +46,3 @@ spec:
         target:
           type: Utilization
           averageUtilization: {{ .Values.frontend.cpuAverageUtilization }}
-  resources:
-    requests:
-      cpu: 200m
-      memory: 256Mi
-    limits:
-      cpu: 500m
-      memory: 512Mi
