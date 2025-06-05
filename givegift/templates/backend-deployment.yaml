@@ -30,6 +30,11 @@ spec:
             - name: db-ca-cert-vol
               mountPath: /etc/ssl/certs
               readOnly: true
+          resources:
+            requests:
+              cpu: "250m"
+            limits:
+              cpu: "500m" 
 
       volumes:
         - name: db-ca-cert-vol
